@@ -48,13 +48,17 @@
 }
 
 % place, optional title, date
-\newcommand{\experience}[3]{
+\newcommand{\experience}[4]{
     \ifx&#2&
         \item[{#1}]
     \else
-        \item[{#1}, \emph{#2}]
+        \ifx&#3&
+            \item[{#1}, \emph{#2}]
+        \else
+            \item[{#1}, \emph{#2}, \small{#3}]
+        \fi
     \fi
-    \when{#3}
+    \when{#4}
 }
 
 \newcommand{\contact}[4]{
@@ -107,17 +111,8 @@
 \begin{description}
 \squish   
 \experience{Oregon State University}
-           {BS, Electrical and Computer Engineering}
-           {June 2015}
-
-	- Led a team of three in the design and development of a wearable pendant from intitial concept to prototyping 
-
-	- Built and programmed in C a FM alarm clock-radio on an Atmega128 that communicated with an Atmega48 and a Texas Instruments LM73 temperature sensor.
-
-	- Calculated the benefits and cost of current computer architecture design techniques such as pipelining 
-
-\experience{Oregon State University}
-           {BS, Computer Science}
+           {BS Computer Science}
+           {GPA: 3.86}
            {June 2015}
 
 	- Implemented in a modified Linux kernel an elevator io-scheduler and a best-fit algorithm for the Simple List of Blocks (SLOB) 
@@ -127,8 +122,21 @@
 	- Demonstrated basic proficiency with shaders, perspectives, lighting, and objects in OpenGL 
 
 
+\experience{Oregon State University}
+           {BS Electrical Engineering}
+           {GPA: 3.86}
+           {June 2015}
+
+	- Led a team of three in the design and development of a wearable pendant from intitial concept to prototyping 
+
+	- Built and programmed in C a FM alarm clock-radio on an Atmega128 that communicated with an Atmega48 and a Texas Instruments LM73 temperature sensor.
+
+	- Calculated the benefits and cost of current computer architecture design techniques such as pipelining 
 
 \end{description}
+
+\skill{Class List}{Operating Systems 1\&2, Translators, Computer Architecture, Microprocessor System Design, Software Engineering 1\&2, Programming Language Fundamentals, Computer Organization \& Assembly Language}
+
 
 \heading{Employment}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -136,6 +144,7 @@
 \squish
 \experience{Air-Weigh}
            {Software Engineer Intern}
+           {}
            {June 2014 - December 2014}
  
 	- Pitched the design for a new communication protocol to high-level managers
@@ -146,6 +155,7 @@
   
 \experience{Garmin AT}
            {Software Engineer Intern}
+           {}
            {April 2013 - September 2013}
  
 	- Implemented a search feature for a legacy database to facilitate access to 21 years of data
@@ -158,11 +168,20 @@
  
 \end{description}
 
+
+\heading{Skills}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\skill{Languages}{Fluent in C, familiar with Java, played with Haskell and Python}
+
+\skill{Tools}{Experienced with oscilloscope, played with GNU debugger}
+
+
 \heading{Extracurriculars}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{description}
 \squish
 \experience{Phi Sigma Rho - Engineering Sororoity}
+           {}
            {}
            {Fall 2010 - Spring 2015}
 
@@ -175,6 +194,7 @@
 
 \experience{FIRST Tech Challenge}
            {Volunteer}
+           {}
            {Winter 2012 - Winter 2015}
 
 	- Enforced safety protocols and handled paperwork as pit administrator
@@ -185,6 +205,7 @@
 
 
 \experience{Oregon State University Robotics Club}
+           {}
            {}
            {Fall 2010 - Spring 2012}
 
