@@ -51,14 +51,18 @@
 \newcommand{\experience}[4]{
     \ifx&#2&
         \item[{#1}]
+        \when{#4}
     \else
         \ifx&#3&
             \item[{#1}, \emph{#2}]
+            \when{#4}
         \else
-            \item[{#1}, \emph{#2}, \small{#3}]
+            \item[{#1}, \emph{#2}]
+            \when{#4}
+            \item{#3}
+            \when{}
         \fi
     \fi
-    \when{#4}
 }
 
 \newcommand{\contact}[4]{
@@ -123,7 +127,7 @@
 
 
 \experience{Oregon State University}
-           {BS Electrical Engineering}
+           {BS Electrical \& Computer Engineering}
            {GPA: 3.86}
            {June 2015}
 
@@ -183,31 +187,27 @@
 \experience{Phi Sigma Rho - Engineering Sororoity}
            {}
            {}
-           {Fall 2010 - Spring 2015}
+           {2010 - 2015}
 
 	- Mentored and tutored younger Electrical Engineering and Computer Science students
 
 	- Maintained the sorority's website for 2 years as co-webmaster
 
-	- Participated in community service projects such as Habitat for Humanity, Relay for Life, and helping at the Starker Arts Garden  for Education gardens
-
 
 \experience{FIRST Tech Challenge}
            {Volunteer}
            {}
-           {Winter 2012 - Winter 2015}
+           {2012 - 2015}
 
 	- Enforced safety protocols and handled paperwork as pit administrator
 
 	- Helped keep event on schedule by wrangling teams as team queuer
 
-	- Watched for fouls and calculated points during matches as referee
-
 
 \experience{Oregon State University Robotics Club}
            {}
            {}
-           {Fall 2010 - Spring 2012}
+           {2010 - 2012}
 
 	- Assembled 2 different robots using the Oregon State Robotic Kits
 
