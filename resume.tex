@@ -49,18 +49,23 @@
 
 % place, optional title, date
 \newcommand{\experience}[4]{
-    \ifx&#2&
-        \item[{#1}]
-        \when{#4}
+    \ifx&#1&
+       \item[{#1}]
+       \when{}
     \else
-        \ifx&#3&
-            \item[{#1}, \emph{#2}]
+        \ifx&#2&
+            \item[{#1}]
             \when{#4}
         \else
-            \item[{#1}, \emph{#2}]
-            \when{#4}
-            \item{#3}
-            \when{}
+            \ifx&#3&
+                \item[{#1}, \emph{#2}]
+                \when{#4}
+            \else
+                \item[{#1}, \emph{#2}]
+                \when{#4}
+                \item{#3}
+                \when{}
+            \fi
         \fi
     \fi
 }
@@ -110,36 +115,34 @@
 %\skill{Leadership}{Teaching, public speaking, event planning, curriculum
 %design}
 
+\large{\textbf{Objective:}}
+	A position in embedded system development
+
 \heading{Education}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{description}
 \squish   
 \experience{Oregon State University}
            {BS Computer Science}
-           {GPA: 3.86}
+           {GPA: 3.86: Summa Cum Laude}
            {June 2015}
 
-	- Implemented in a modified Linux kernel an elevator io-scheduler and a best-fit algorithm for the Simple List of Blocks (SLOB) 
+	- Experimented with an elevator I/O scheduler and a best-fit memory allocator in a modified Linux kernel
 
-	- Designed and implemented in C a translator which compiled a Lisp-like language to gForth 
-
-	- Demonstrated basic proficiency with shaders, perspectives, lighting, and objects in OpenGL 
-
+	- Wrote a translator in C to compile a simple Lisp-like language to gForth 
 
 \experience{Oregon State University}
            {BS Electrical \& Computer Engineering}
-           {GPA: 3.86}
+           {GPA: 3.86: Summa Cum Laude}
            {June 2015}
 
-	- Led a team of three in the design and development of a wearable pendant from intitial concept to prototyping 
+	- Built and programmed in C an FM alarm clock-radio on an Atmega128 that also displayed indoor and outdoor temperature 
 
-	- Built and programmed in C a FM alarm clock-radio on an Atmega128 that communicated with an Atmega48 and a Texas Instruments LM73 temperature sensor.
-
-	- Calculated the benefits and cost of current computer architecture design techniques such as pipelining 
+	- Led a team of three in the design and development of peer-to-peer communicating pendants
 
 \end{description}
 
-\skill{Class List}{Operating Systems 1\&2, Translators, Computer Architecture, Microprocessor System Design, Software Engineering 1\&2, Programming Language Fundamentals, Computer Organization \& Assembly Language}
+\skill{Class List}{Operating Systems 1\&2, Translators, Computer Architecture, Microprocessor System Design, Programming Language Fundamentals, Computer Organization \& Assembly Language, Semiconductor Devices}
 
 
 \heading{Employment}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -149,36 +152,36 @@
 \experience{Air-Weigh}
            {Software Engineer Intern}
            {}
-           {June 2014 - December 2014}
+           {June - December 2014}
  
-	- Pitched the design for a new communication protocol to high-level managers
-
 	- Developed a physical-layer protocol bridge from initial requirements to final software and hardware testing
-
-	- Wrote a pictorial how-to guide for using a new tool that created processor initialization code
   
 \experience{Garmin AT}
            {Software Engineer Intern}
            {}
-           {April 2013 - September 2013}
- 
-	- Implemented a search feature for a legacy database to facilitate access to 21 years of data
+           {April - September 2013}
 
-	- Identified error cases and implemented autonomous unit tests to improve code coverage by 80 percent
+ 	- Wrote a module to search a database of millions of aircraft obstacles
 
-	- Developed a serial-peripheral interface (SPI) driver from initial code to software tests that was added to the operating system
+	- Identified error cases and implemented automated unit tests, improving code coverage to 80 percent
 
-	- Helped teach an overview of key kernel development concepts to new software developers
- 
+	- Developed a serial-peripheral interface (SPI) driver for a real-time operating system from initial code to software tests
+
 \end{description}
 
 
 \heading{Skills}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{description}
+\squish
+\experience{Languages}{}{}{}
 
-\skill{Languages}{Fluent in C, familiar with Java, basic understanding of Haskell and Python}
+	Fluent in C, familiar with Java and Atmega assembler, exposure to Haskell and Python
 
-\skill{Tools}{Experienced with oscilloscope, basic understanding of GNU debugger}
+\experience{Tools}{}{}{}
 
+	Experienced with oscilloscopes, exposure to GNU debugger
+
+\end{description}
 
 \heading{Extracurriculars}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -191,17 +194,17 @@
 
 	- Mentored and tutored younger Electrical Engineering and Computer Science students
 
-	- Maintained the sorority's website for 2 years as co-webmaster
+	- Maintained the sorority's website for two years as co-webmaster
 
 
 \experience{FIRST Tech Challenge}
-           {Volunteer}
+           {Robot Competition Volunteer}
            {}
            {2012 - 2015}
 
-	- Enforced safety protocols and handled paperwork as pit administrator
+	- Enforced safety protocols and handled paperwork with pit administrator
 
-	- Helped keep event on schedule by wrangling teams as team queuer
+	- Helped keep event on schedule by wrangling teams 
 
 
 \experience{Oregon State University Robotics Club}
@@ -209,9 +212,7 @@
            {}
            {2010 - 2012}
 
-	- Assembled 2 different robots using the Oregon State Robotic Kits
-
-	- Maintained the club website for 1 year as webmaster
+	- Assembled two different robots using the Oregon State Robotic Kits
 
 
 \end{description}
